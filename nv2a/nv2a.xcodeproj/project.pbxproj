@@ -12,6 +12,9 @@
 		42E1F6D21B5F502C00224A6B /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42E1F6D11B5F502C00224A6B /* OpenGL.framework */; };
 		42E1F6D61B5F51E700224A6B /* nv2a_psh.cl in Sources */ = {isa = PBXBuildFile; fileRef = 42E1F6D51B5F51E700224A6B /* nv2a_psh.cl */; };
 		42E1F6D81B5F536800224A6B /* nv2a_vsh.cl in Sources */ = {isa = PBXBuildFile; fileRef = 42E1F6D71B5F536800224A6B /* nv2a_vsh.cl */; };
+		42E1F6DB1B5F634C00224A6B /* nv2a_vsh_sw.c in Sources */ = {isa = PBXBuildFile; fileRef = 42E1F6D91B5F634C00224A6B /* nv2a_vsh_sw.c */; };
+		42E1F6DE1B5F637B00224A6B /* nv2a_dma.c in Sources */ = {isa = PBXBuildFile; fileRef = 42E1F6DC1B5F637B00224A6B /* nv2a_dma.c */; };
+		42E1F6E11B5F639600224A6B /* nv2a_fifo.c in Sources */ = {isa = PBXBuildFile; fileRef = 42E1F6DF1B5F639600224A6B /* nv2a_fifo.c */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -33,6 +36,12 @@
 		42E1F6D11B5F502C00224A6B /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = System/Library/Frameworks/OpenGL.framework; sourceTree = SDKROOT; };
 		42E1F6D51B5F51E700224A6B /* nv2a_psh.cl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.opencl; path = nv2a_psh.cl; sourceTree = "<group>"; };
 		42E1F6D71B5F536800224A6B /* nv2a_vsh.cl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.opencl; path = nv2a_vsh.cl; sourceTree = "<group>"; };
+		42E1F6D91B5F634C00224A6B /* nv2a_vsh_sw.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = nv2a_vsh_sw.c; sourceTree = "<group>"; };
+		42E1F6DA1B5F634C00224A6B /* nv2a_vsh_sw.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = nv2a_vsh_sw.h; sourceTree = "<group>"; };
+		42E1F6DC1B5F637B00224A6B /* nv2a_dma.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = nv2a_dma.c; sourceTree = "<group>"; };
+		42E1F6DD1B5F637B00224A6B /* nv2a_dma.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = nv2a_dma.h; sourceTree = "<group>"; };
+		42E1F6DF1B5F639600224A6B /* nv2a_fifo.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = nv2a_fifo.c; sourceTree = "<group>"; };
+		42E1F6E01B5F639600224A6B /* nv2a_fifo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = nv2a_fifo.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +81,10 @@
 				42E1F6D41B5F504700224A6B /* emu */,
 				42E1F6D31B5F503900224A6B /* kernels */,
 				42E1F6C81B5F4FEB00224A6B /* main.c */,
+				42E1F6DC1B5F637B00224A6B /* nv2a_dma.c */,
+				42E1F6DF1B5F639600224A6B /* nv2a_fifo.c */,
+				42E1F6E01B5F639600224A6B /* nv2a_fifo.h */,
+				42E1F6DD1B5F637B00224A6B /* nv2a_dma.h */,
 			);
 			path = nv2a;
 			sourceTree = "<group>";
@@ -88,6 +101,8 @@
 		42E1F6D41B5F504700224A6B /* emu */ = {
 			isa = PBXGroup;
 			children = (
+				42E1F6D91B5F634C00224A6B /* nv2a_vsh_sw.c */,
+				42E1F6DA1B5F634C00224A6B /* nv2a_vsh_sw.h */,
 			);
 			name = emu;
 			sourceTree = "<group>";
@@ -148,8 +163,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				42E1F6E11B5F639600224A6B /* nv2a_fifo.c in Sources */,
 				42E1F6D81B5F536800224A6B /* nv2a_vsh.cl in Sources */,
+				42E1F6DE1B5F637B00224A6B /* nv2a_dma.c in Sources */,
 				42E1F6C91B5F4FEB00224A6B /* main.c in Sources */,
+				42E1F6DB1B5F634C00224A6B /* nv2a_vsh_sw.c in Sources */,
 				42E1F6D61B5F51E700224A6B /* nv2a_psh.cl in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
